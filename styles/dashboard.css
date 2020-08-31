@@ -1,0 +1,177 @@
+:root {
+    --primary-color: #8257e5;
+    --primary-color-lighter: #9871F5;
+}
+
+body {
+    background: #E1E1E6;
+}
+
+main {
+    padding-left: 300px;
+}
+
+header > nav {
+    background: var(--primary-color);
+}
+
+.sidenav li.logo {
+    margin-top: 16px;
+    margin-bottom: 64px;
+    text-align: center;
+}
+
+.sidenav li.logo a:hover {
+    background-color: transparent !important;
+}
+.sidenav li.logo img {
+    max-width: 80%;
+}
+
+.header-colored {
+    background: var(--primary-color);
+    width: 100%;
+    height: 100px;
+}
+
+main > .content {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: -80px;
+}
+
+main > .content > nav.breadcrumb-nav {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+main > .content > .container {
+    width: 100%;
+    background: #FFF;
+    border-radius: 10px 10px 0 0;
+    padding: 20px;
+    min-height: calc(100vh - 84px);
+}
+
+/* collections */
+.collection {
+    border: none;
+}
+
+.collection-item {
+    display: flex;
+    align-items: center;
+}
+
+.collection-item .left {
+    width: 70px;
+    margin-right: 15px;
+}
+
+.collection-item .left img {
+    width: 100%;
+    height: auto;
+}
+
+.collection-item .left .marker {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-color);
+    color: #E1E1E6;
+}
+
+.collection-item .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.collection-item .right p {
+    margin: 0;
+    padding: 0;
+}
+
+.collection-item a {
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+
+.pagination-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.pagination-container > ul {
+    width: auto;
+}
+
+.pagination li.active {
+    background: var(--primary-color);
+}
+.question-options [type="radio"]:checked+span:after,
+.question-options [type="radio"].with-gap:checked+span:after {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.content nav.breadcrumb-nav {
+    height: 32px;
+    line-height: 32px;
+    margin-bottom: 5px;
+}
+.content nav.breadcrumb-nav .breadcrumb {
+    font-size: 14px;
+}
+.content nav.breadcrumb-nav .breadcrumb::before {
+    font-size: 20px;
+    vertical-align: top;
+}
+
+
+.dash-primary {
+    background: var(--primary-color);
+}
+.dash-primary:hover {
+    background: var(--primary-color-lighter);
+}
+
+.no-items > .center > i {
+    font-size: 250px;
+}
+
+
+footer.page-footer {
+    background: var(--primary-color);
+}
+
+footer.page-footer .container {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media (max-width: 992px) {
+    main {
+        padding-left: 0;
+    }
+    main > .content {
+        padding: 0;
+    }
+    header > nav {
+        height: 64px;
+    }
+    header > nav > .nav-wrapper {
+        padding-left: 10px;
+    }
+    header > nav > .nav-wrapper a.sidenav-trigger {
+        margin: 0;
+    }
+}
