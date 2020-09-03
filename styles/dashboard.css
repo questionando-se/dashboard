@@ -175,3 +175,26 @@ footer.page-footer .container {
         margin: 0;
     }
 }
+
+
+
+
+#home-dash .card-panel {
+    border-radius: 10px;
+}
+#home-dash .card-panel .card-panel-actions {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+#home-dash .card-panel .card-panel-actions a {
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    width: auto;
+    align-items: center;
+}
+#home-dash .card-panel .card-panel-actions a i {
+    margin-left: 10px;
+}
