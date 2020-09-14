@@ -24,7 +24,7 @@ function getParentLi(element) {
 }
 
 function getQuestionData() {
-    var clone = document.querySelector('main .content .container .info h4').cloneNode();
+    var clone = document.querySelector('main .content .info h4').cloneNode();
     var inners = clone.querySelectorAll('span, ul');
     for (var i = 0; i < inners.length; i += 1) {
         clone.removeChild(inners[i]);
@@ -72,8 +72,8 @@ function onSaveQuestionModalOpen() {
             var question = getQuestionData();
             for (var j = 0; j < exams.length; j += i) {
                 if (exams[j].id === id) {
-                    if (!exams[j].question.includes(question)) {
-                        exams[j].question.push(question);
+                    if (!exams[j].questions.includes(question)) {
+                        exams[j].questions.push(question);
                     }
                     //if (!exams[j].questions.includes(fileId)) {
                     //    exams[j].questions.push(fileId);
