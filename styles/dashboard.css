@@ -55,26 +55,26 @@ main > .content > .container {
 }
 
 /* collections */
-.collection {
+main .container .collection {
     border: none;
 }
 
-.collection-item {
+main .container .collection-item {
     display: flex;
     align-items: center;
 }
 
-.collection-item .left {
+main .container .collection-item .left {
     width: 70px;
     margin-right: 15px;
 }
 
-.collection-item .left img {
+main .container .collection-item .left img {
     width: 100%;
     height: auto;
 }
 
-.collection-item .left .marker {
+main .container .collection-item .left .marker {
     width: 70px;
     height: 70px;
     display: flex;
@@ -84,19 +84,19 @@ main > .content > .container {
     color: #E1E1E6;
 }
 
-.collection-item .right {
+main .container .collection-item .right {
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: stretch;
 }
 
-.collection-item .right p {
+main .container .collection-item .right p {
     margin: 0;
     padding: 0;
 }
 
-.collection-item a {
+main .container .collection-item a {
     font-size: 1.2rem;
     color: rgba(0, 0, 0, 0.87);
 }
