@@ -1,0 +1,40 @@
+body {
+    column-count: 2;
+    column-gap: 20px;
+}
+
+.question-title {
+    background: #CCC;
+    margin: 10px 0;
+}
+
+#question-verify {
+    display: none;
+}
+
+.question-body {
+    counter-reset: my-alternative-counter;
+}
+.question-options {
+    margin-bottom: 50px;
+}
+.question-options .option-item span {
+    height: auto;
+}
+.question-options img {
+    max-width: 100%;
+    height: auto;
+}
+
+.question-options input[type=radio] + span::before {
+	counter-increment: my-alternative-counter;
+	content: counter(my-alternative-counter, upper-alpha) ") ";
+	border: transparent !important;
+    background: transparent !important;
+    margin: 0;
+}
+
+.question-options input[type=radio] + span::after{
+	border: transparent !important;
+	background: transparent !important;
+}

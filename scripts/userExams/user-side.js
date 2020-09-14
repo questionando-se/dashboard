@@ -9,6 +9,23 @@ function getParentLi(element) {
     }
 }
 
+function openLists(id) {
+    var exam = getExam(id);
+    var html = '';
+    for (var i = 0; i < exam.questions.length; i += 1) {
+        html += '<div class="question-title">' + exam.questions[i].title + '</div>';
+        html += exam.questions[i].data;
+    }
+    var win = window.open('', exam.name);
+    win.document.head.innerHTML = '<meta charset="UTF-8" />\n<meta name="viewport" content="width=device-width, initial-scale=1.0" />\n<title>' + exam.name + '</title>'
+        + '<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />'
+        + '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />'
+        + '<link rel="stylesheet" href="http://localhost:3333/styles/question.css" />'
+        + '<link rel="stylesheet" href="http://localhost:3333/styles/userExams/list.css" />';
+    win.document.body.innerHTML = html
+        + '<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>';
+}
+
 function writeExamCollection() {
     var exams = getExamCollection();
     var collection = document.createElement('ul');
@@ -54,7 +71,15 @@ function writeExamCollection() {
     var listButtons = collection.querySelectorAll('.exam-list');
     for (var i = 0; i < listButtons.length; i += 1) {
         listButtons[i].addEventListener('click', function(e) {
-            alert('Funcionalidade ainda não implementada.')
+            var li = getParentLi(e.target);
+            if (li === null || li === undefined) {
+                return;
+            }
+            var id = li.getAttribute('data-id');
+            if (id === null || id === undefined) {
+                return;
+            }
+            openLists(id);
         });
     }
 

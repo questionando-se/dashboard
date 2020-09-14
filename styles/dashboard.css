@@ -148,6 +148,33 @@ main .container .collection:not(.materialize-collection) .collection-item a {
 }
 
 
+
+
+/* userExams */
+.dropdown-content li > a, .dropdown-content li > span {
+    color: var(--primary-color);
+}
+.collection .collection-item .secondary-content  {
+    color: var(--primary-color);
+}
+
+#add-exam-to-list input[type="text"]:not(.browser-default):focus:not([readonly]) {
+    border-bottom: 1px solid var(--primary-color);
+    box-shadow: 0 1px 0 0 var(--primary-color);
+}
+
+#add-exam-to-list input[type="text"]:not(.browser-default):focus:not([readonly]) + label {
+    color: var(--primary-color);
+}
+
+#exams-collection .secondary-content{
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+
+
+
 footer.page-footer {
     background: var(--primary-color);
 }

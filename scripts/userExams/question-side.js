@@ -24,7 +24,7 @@ function getParentLi(element) {
 }
 
 function getQuestionData() {
-    var clone = document.querySelector('main .content .info h4').cloneNode();
+    var clone = document.querySelector('main .content .info h4').cloneNode(true);
     var inners = clone.querySelectorAll('span, ul');
     for (var i = 0; i < inners.length; i += 1) {
         clone.removeChild(inners[i]);
