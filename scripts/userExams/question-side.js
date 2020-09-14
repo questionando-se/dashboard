@@ -23,6 +23,24 @@ function getParentLi(element) {
     }
 }
 
+function getQuestionData() {
+    var clone = document.querySelector('main .content .container .info h4').cloneNode();
+    var inners = clone.querySelectorAll('span, ul');
+    for (var i = 0; i < inners.length; i += 1) {
+        clone.removeChild(inners[i]);
+    }
+    var title = clone.innerText;
+    var data = document.querySelector('main .container .question').outerHTML;
+    var splitedPathName = location.pathname.split('/');
+    var fileName = splitedPathName[splitedPathName.length - 1];
+    var fileId = fileName.replace('.html', '');
+    return {
+        id: fileId,
+        title: title,
+        data: data
+    };
+}
+
 function onSaveQuestionModalOpen() {
     var exams = getExamCollection();
     if (!exams) {
@@ -48,14 +66,18 @@ function onSaveQuestionModalOpen() {
                 return;
             }
             var exams = getExamCollection();
-            var splitedPathName = location.pathname.split('/');
-            var fileName = splitedPathName[splitedPathName.length - 1];
-            var fileId = fileName.replace('.html', '');
+            //var splitedPathName = location.pathname.split('/');
+            //var fileName = splitedPathName[splitedPathName.length - 1];
+            //var fileId = fileName.replace('.html', '');
+            var question = getQuestionData();
             for (var j = 0; j < exams.length; j += i) {
                 if (exams[j].id === id) {
-                    if (!exams[j].questions.includes(fileId)) {
-                        exams[j].questions.push(fileId);
+                    if (!exams[j].question.includes(question)) {
+                        exams[j].question.push(question);
                     }
+                    //if (!exams[j].questions.includes(fileId)) {
+                    //    exams[j].questions.push(fileId);
+                    //}
                 }
             }
             setExamCollection(exams);
@@ -90,9 +112,10 @@ function createAddNewExamModal() {
         var nameInput = modal.querySelector('#new-exam-name');
         var name = nameInput.value;
         var exam = createExam(name);
-        var splitedPathName = location.pathname.split('/');
-        var fileName = splitedPathName[splitedPathName.length - 1];
-        exam.questions.push(fileName.replace('.html', ''));
+        // var splitedPathName = location.pathname.split('/');
+        // var fileName = splitedPathName[splitedPathName.length - 1];
+        // exam.questions.push(fileName.replace('.html', ''));
+        exam.questions.push(getQuestionData());
         var examsCollection = getExamCollection();
         examsCollection.push(exam);
         setExamCollection(examsCollection);
