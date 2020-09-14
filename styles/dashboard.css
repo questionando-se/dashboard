@@ -55,26 +55,26 @@ main > .content > .container {
 }
 
 /* collections */
-main .container .collection {
+main .container .collection:not(.materialize-collection) {
     border: none;
 }
 
-main .container .collection-item {
+main .container .collection:not(.materialize-collection) .collection-item {
     display: flex;
     align-items: center;
 }
 
-main .container .collection-item .left {
+main .container .collection:not(.materialize-collection) .collection-item .left {
     width: 70px;
     margin-right: 15px;
 }
 
-main .container .collection-item .left img {
+main .container .collection:not(.materialize-collection) .collection-item .left img {
     width: 100%;
     height: auto;
 }
 
-main .container .collection-item .left .marker {
+main .container .collection:not(.materialize-collection) .collection-item .left .marker {
     width: 70px;
     height: 70px;
     display: flex;
@@ -84,19 +84,19 @@ main .container .collection-item .left .marker {
     color: #E1E1E6;
 }
 
-main .container .collection-item .right {
+main .container .collection:not(.materialize-collection) .collection-item .right {
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: stretch;
 }
 
-main .container .collection-item .right p {
+main .container .collection:not(.materialize-collection) .collection-item .right p {
     margin: 0;
     padding: 0;
 }
 
-main .container .collection-item a {
+main .container .collection:not(.materialize-collection) .collection-item a {
     font-size: 1.2rem;
     color: rgba(0, 0, 0, 0.87);
 }
