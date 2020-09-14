@@ -1,5 +1,17 @@
+function createExam(name) {
+    return {
+        id: Date.now().toString(),
+        name: name,
+        questions: []
+    };
+}
+
 function getExamCollection() {
-    var exams = JSON.parse(window.localStorage.getItem('userExams'));
+    var raw = window.localStorage.getItem('userExams');
+    if (!raw) {
+        return [];
+    }
+    var exams = JSON.parse(raw);
     return exams;
 }
 
