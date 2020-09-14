@@ -38,3 +38,21 @@ body {
 	border: transparent !important;
 	background: transparent !important;
 }
+
+@media (max-width: 600px) {
+    body {
+        column-count: 1;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1200px) {
+    body {
+        column-count: 2;
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        column-count: 3;
+    }
+}
