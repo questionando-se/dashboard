@@ -18,7 +18,7 @@ body {
 .question-options {
     margin-bottom: 50px;
 }
-.question-options .option-item span {
+.question-options input[type=radio] + span {
     height: auto;
 }
 .question-options img {

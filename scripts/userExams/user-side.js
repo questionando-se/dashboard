@@ -21,8 +21,8 @@ function openLists(id) {
         + '<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />'
         + '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />'
         + '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous" />'
-        + '<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/questionando-se/dashboard@0.0.12/styles/question.css" />'
-        + '<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/questionando-se/dashboard@0.0.12/styles/userExams/list.css" />';
+        + '<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/questionando-se/dashboard@0.0.13/styles/question.css" />'
+        + '<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/questionando-se/dashboard@0.0.13/styles/userExams/list.css" />';
     win.document.body.innerHTML = html
         + '<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>';
 }
