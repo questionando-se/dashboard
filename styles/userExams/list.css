@@ -15,6 +15,12 @@ body {
 .question-body {
     counter-reset: my-alternative-counter;
 }
+img {
+    -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+    page-break-inside: avoid; /* Firefox */
+    break-inside: avoid; /* IE 10+ */
+}
+
 .question-options {
     margin-bottom: 50px;
 }
@@ -24,10 +30,6 @@ body {
 .question-options img {
     max-width: 100%;
     height: auto;
-
-    -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
-    page-break-inside: avoid; /* Firefox */
-    break-inside: avoid; /* IE 10+ */
 }
 
 .question-options input[type=radio] + span::before {
